@@ -1,6 +1,6 @@
 from PIL import Image
 
-ava = Image.open("C:/python_scripts/ava/monro.jpg")
+ava = Image.open("monro.jpg")
 red, blue, green = ava.split()
 
 
@@ -8,16 +8,16 @@ red, blue, green = ava.split()
 coordinates = (30, 0, red.width, red.height)
 cropred1 = red.crop(coordinates)
 
-coordinates = (0, 0, red.width-30, red.height)
+coordinates = (15, 0, red.width-15, red.height)
 cropred2 = red.crop(coordinates)
 
 red_end = Image.blend(cropred1, cropred2, 0.5)
 
 
-coordinates = (0, 0, blue.width-30, blue.height)
+coordinates = (, 0, blue.width-30, blue.height)
 cropblue1 = blue.crop(coordinates)
 
-coordinates = (30, 0, blue.width, blue.height)
+coordinates = (15, 0, blue.width-15, blue.height)
 cropblue2 = blue.crop(coordinates)
 
 blue_end = Image.blend(cropblue1, cropblue2, 0.5)
@@ -31,6 +31,7 @@ full_image.save("C:/python_scripts/ava/full_image.jpg")
 
 full_image.thumbnail((80,80))
 full_image.save("C:/python_scripts/ava/ava.jpg")
+
 
 
 
