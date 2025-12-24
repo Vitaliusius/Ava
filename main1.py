@@ -27,10 +27,10 @@ coordinates = (15, 0, green.width-15, green.height)
 green_end = green.crop(coordinates)
 
 full_image = Image.merge("RGB",(red_end,green_end,blue_end))
-full_image.save("C:/python_scripts/ava/full_image.jpg")
 
 full_image.thumbnail((80,80))
 full_image.save("C:/python_scripts/ava/ava.jpg")
+
 
 
 
