@@ -1,7 +1,7 @@
 from PIL import Image
 
 ava = Image.open("monro.jpg")
-red, blue, green = ava.split()
+red, green, blue = ava.split()
 
 
 
@@ -30,6 +30,7 @@ full_image = Image.merge("RGB",(red_end,green_end,blue_end))
 
 full_image.thumbnail((80,80))
 full_image.save("ava.jpg")
+
 
 
 
